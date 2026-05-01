@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sara Hydro Engineering Sdn Bhd</title>
+  <style>
+    :root{--primary:#0b3d91;--dark:#0a2a66;--bg:#f4f6f9;--card:#ffffff;}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Segoe UI, Arial, sans-serif;background:var(--bg);color:#222}
+    header{position:sticky;top:0;background:var(--dark);color:#fff;display:flex;align-items:center;justify-content:space-between;padding:14px 24px;z-index:10}
+    .brand{display:flex;align-items:center;gap:10px}
+    .brand img{height:38px;width:38px;border-radius:50%;background:#fff;padding:4px}
+    nav a{color:#fff;text-decoration:none;margin-left:18px;font-weight:600}
+    nav a:hover{opacity:.85}
+    .hero{background:linear-gradient(rgba(11,61,145,.8),rgba(11,61,145,.8)), url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat; color:#fff; padding:80px 24px; text-align:center}
+    .hero h1{margin:0 0 10px;font-size:34px}
+    .hero p{margin:0 auto 18px;max-width:720px}
+    .btn{display:inline-block;background:#fff;color:var(--dark);padding:10px 16px;border-radius:6px;text-decoration:none;font-weight:600}
+    .container{max-width:1100px;margin:0 auto;padding:40px 20px}
+    h2{margin:0 0 16px;color:var(--dark)}
+    .filters{margin-bottom:16px}
+    .filters button{margin-right:8px;padding:8px 12px;border:1px solid #ccc;background:#fff;border-radius:6px;cursor:pointer}
+    .filters button.active{background:var(--primary);color:#fff;border-color:var(--primary)}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+    .card{background:var(--card);border-radius:10px;box-shadow:0 3px 10px rgba(0,0,0,.08);overflow:hidden}
+    .card img{width:100%;height:160px;object-fit:cover}
+    .card .p{padding:14px}
+    .tag{display:inline-block;font-size:12px;padding:4px 8px;border-radius:999px;background:#e6eefc;color:var(--primary);margin-bottom:6px}
+    .row{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+    .stat{background:#fff;border-radius:10px;padding:16px;text-align:center;box-shadow:0 3px 10px rgba(0,0,0,.08)}
+    .download a{display:inline-block;margin-top:8px}
+    footer{background:var(--dark);color:#fff;text-align:center;padding:18px;margin-top:30px}
+    @media (max-width:600px){.hero h1{font-size:26px}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <!-- Replace src with your local logo file name (e.g., logo.png). Background is visually masked by white circle -->
+      <img src="logo.png" alt="Sara Hydro Logo" />
+      <strong>SARA HYDRO</strong>
+    </div>
+    <nav>
+      <a href="#portfolio">Projects</a>
+      <a href="#capabilities">Capabilities</a>
+      <a href="#credibility">Credibility</a>
+      <a href="#downloads">Downloads</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Engineering & Infrastructure Solutions</h1>
+    <p>Hydropower • Civil Infrastructure • Building Upgrades — structured, evidence-based delivery for high-value tenders.</p>
+    <a href="#portfolio" class="btn">Explore Projects</a>
+  </section>
+
+  <div class="container">
+    <section id="portfolio">
+      <h2>Project Portfolio Dashboard</h2>
+      <div class="filters">
+        <button class="active" onclick="filterCards('all', this)">All</button>
+        <button onclick="filterCards('hydro', this)">Hydropower</button>
+        <button onclick="filterCards('infra', this)">Infrastructure</button>
+        <button onclick="filterCards('building', this)">Building</button>
+      </div>
+      <div class="grid" id="cards">
+        <div class="card" data-cat="hydro">
+          <img src="https://images.unsplash.com/photo-1509395176047-4a66953fd231?q=80&w=1200&auto=format&fit=crop" />
+          <div class="p">
+            <div class="tag">Hydropower</div>
+            <h3>Tekal Hydropower Dam</h3>
+            <p>Scope: Turbine integration. Result: +15% cost efficiency, early delivery.</p>
+            <a class="btn" href="#">View Case Study</a>
+          </div>
+        </div>
+        <div class="card" data-cat="infra">
+          <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1200&auto=format&fit=crop" />
+          <div class="p">
+            <div class="tag">Infrastructure</div>
+            <h3>Highway Expansion Upgrade</h3>
+            <p>Scope: Road widening & drainage. Result: improved flow, on-time completion.</p>
+            <a class="btn" href="#">View Case Study</a>
+          </div>
+        </div>
+        <div class="card" data-cat="building">
+          <img src="https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?q=80&w=1200&auto=format&fit=crop" />
+          <div class="p">
+            <div class="tag">Building</div>
+            <h3>Swinburne Sarawak Upgrade</h3>
+            <p>Scope: Refurbishment & M&E. Result: minimal downtime, improved facilities.</p>
+            <a class="btn" href="#">View Case Study</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="capabilities" style="margin-top:36px">
+      <h2>Capabilities</h2>
+      <div class="row">
+        <div class="card"><div class="p"><h3>Civil & Structural</h3><p>Roadworks, drainage, structural upgrades.</p></div></div>
+        <div class="card"><div class="p"><h3>Hydropower Systems</h3><p>Turbine installation, water systems.</p></div></div>
+        <div class="card"><div class="p"><h3>Infrastructure</h3><p>Highways, utilities, site development.</p></div></div>
+        <div class="card"><div class="p"><h3>Building Works</h3><p>Refurbishment, institutional upgrades.</p></div></div>
+      </div>
+    </section>
+
+    <section id="credibility" style="margin-top:36px">
+      <h2>Credibility & Performance</h2>
+      <div class="row">
+        <div class="stat"><h3>95%</h3><p>On-time delivery</p></div>
+        <div class="stat"><h3>+15%</h3><p>Avg. cost efficiency</p></div>
+        <div class="stat"><h3>50+</h3><p>Projects delivered</p></div>
+      </div>
+      <div class="card" style="margin-top:16px"><div class="p"><strong>Client Feedback:</strong> “Strong technical capability and reliable execution across infrastructure and building upgrades.”</div></div>
+    </section>
+
+    <section id="downloads" style="margin-top:36px">
+      <h2>Download Centre</h2>
+      <div class="row download">
+        <div class="card"><div class="p"><h3>Company Profile</h3><a class="btn" href="#">Download</a></div></div>
+        <div class="card"><div class="p"><h3>Technical Capabilities</h3><a class="btn" href="#">Download</a></div></div>
+        <div class="card"><div class="p"><h3>Project Case Studies</h3><a class="btn" href="#">Download</a></div></div>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    © 2026 Sara Hydro Engineering Sdn Bhd
+  </footer>
+
+  <script>
+    function filterCards(cat, el){
+      const btns=document.querySelectorAll('.filters button');
+      btns.forEach(b=>b.classList.remove('active'));
+      el.classList.add('active');
+      const cards=document.querySelectorAll('#cards .card');
+      cards.forEach(c=>{
+        if(cat==='all' || c.getAttribute('data-cat')===cat){
+          c.style.display='block';
+        }else{
+          c.style.display='none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>
